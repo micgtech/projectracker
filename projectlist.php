@@ -17,18 +17,17 @@ include 'inc/header.php';
     </div>
 
     <div class="form-container">
-      <ul class="items">
-        <li>Project 1 Test</li>
-        <li>Project 2 Test</li>
-        <li>Project 3 Test</li>
-        <li>My New Project</li>                
+      <ul class="items"></ul>
+        <?php
+          foreach(get_project_list() as $item){
+                  echo "<li>"  . $item['title'] .  "</li>";
+          }
+        ?>        
       </ul>
     </div>
 
 
   </section>
-
-
 </main>
 
 <?php include("inc/footer.php"); ?>
